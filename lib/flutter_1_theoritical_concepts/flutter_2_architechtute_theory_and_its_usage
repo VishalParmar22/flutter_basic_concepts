@@ -1,0 +1,36 @@
+Flutter Architecture
+In this section, we are going to discuss the architecture of the Flutter framework. The Flutter architecture mainly comprises of four components.
+
+Flutter Engine
+Foundation Library
+Widgets
+Design Specific Widgets
+Flutter Engine
+It is a portable runtime for high-quality mobile apps and primarily based on the C++ language. It implements Flutter core libraries that include animation and graphics, file and network I/O, plugin architecture, accessibility support, and a dart runtime for developing, compiling, and running Flutter applications. It takes Google's open-source graphics library, Skia, to render low-level graphics.
+
+Foundation Library
+It contains all the required packages for the basic building blocks of writing a Flutter application. These libraries are written in Dart language.
+
+Widgets
+In Flutter, everything is a widget, which is the core concept of this framework. Widget in the Flutter is basically a user interface component that affects and controls the view and interface of the app. It represents an immutable description of part of the user interface and includes graphics, text, shapes, and animations that are created using widgets. The widgets are similar to the React components.
+
+In Flutter, the application is itself a widget that contains many sub widgets. It means the app is the top-level widget, and its UI is build using one or more children widgets, which again includes sub child widgets. This feature helps you to create a complex user interface very easily.
+
+We can understand it from the hello world example created in the previous section. Here, we are going to explain the example with the following diagram.
+
+Flutter Architecture
+In the above example, we can see that all the components are widgets that contain child widgets. Thus, the Flutter application is itself a widget.
+
+Design Specific Widgets
+The Flutter framework has two sets of widgets that conform to specific design languages. These are Material Design for Android application and Cupertino Style for IOS application.
+
+Gestures
+It is a widget that provides interaction (how to listen for and respond to) in Flutter using GestureDetector. GestureDector is an invisible widget, which includes tapping, dragging, and scaling interaction of its child widget. We can also use other interactive features into the existing widgets by composing with the GestureDetector widget.
+
+State Management
+Flutter widget maintains its state by using a special widget, StatefulWidget. It is always auto re-rendered whenever its internal state is changed. The re-rendering is optimized by calculating the distance between old and new widget UI and render only necessary things that are changes.
+
+Layers
+Layers are an important concept of the Flutter framework, which are grouped into multiple categories in terms of complexity and arranged in the top-down approach. The topmost layer is the UI of the application, which is specific to the Android and iOS platforms. The second topmost layer contains all the Flutter native widgets. The next layer is the rendering layer, which renders everything in the Flutter app. Then, the layers go down to Gestures, foundation library, engine, and finally, core platform-specific code. The following diagram specifies the layers in Flutter app development.
+
+Flutter Architecture
